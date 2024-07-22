@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do list app</title>
+    <link rel="stylesheet" href="login.css">
+    <script>
+        function validateSignIn() {
+            var email = document.getElementById('emailInput').value;
+            var password = document.getElementById('passwordInput').value;
+
+            if (email.trim() === '' || password.trim() === '') {
+                alert('Please enter both email and password.');
+                return false; // Prevent form submission
+            }
+
+            // Additional validation (e.g., email format) can be added here
+
+            return true; // Allow form submission
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="container1">
+            <div class="signupform">
+                <h1>Sign In</h1>
+                <form id="signInForm" onsubmit="return validateSignIn();" action="main.html" method="post">
+                    <div class="input-group">
+                        <div class="input-field">
+                            <input type="email" id="emailInput" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" id="passwordInput" name="password" placeholder="Password" required>
+                        </div>
+                    </div>
+                    <div class="button-field">
+                        <button type="submit">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
